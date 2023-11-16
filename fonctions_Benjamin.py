@@ -6,8 +6,9 @@ def associating_names(name):
         for j in range (len(dico)):
             if name[i]==dico[j]:
                 pre_full_name.append(dico[j-1]+" "+name[i])
-    if pre_full_name!=full_names:
-        full_names.append(pre_full_name)
+    for i in pre_full_name:
+        if i not in full_names:
+            full_names.append(i)
     return full_names
 
 
