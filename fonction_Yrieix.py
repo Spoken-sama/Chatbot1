@@ -5,3 +5,14 @@ def extract_name_president(name):
     else:
         president_last_name = president_name[:-4]
     return president_last_name
+
+def remove_ponctuation(text):
+    with open(text,"w") as t :
+        line = t.readline()
+        while line != "":
+            for char in line:
+                if (char>="!" and char<="/") or (char>=":" and char<="?") or (char>="[" and char<="`") or (char>="{" and char<="~") :
+                    char = " "
+            line = f.readline()
+    t.close()
+
