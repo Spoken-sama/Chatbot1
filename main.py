@@ -13,3 +13,11 @@ for i in speeches:
 full_name = associating_names(last_name)
 for i in full_name:
     print(i)
+
+if __name__ == "__main__":
+    input_folder = "speeches"
+    output_folder = "cleaned"
+
+    convert_to_lowercase_and_save(input_folder, output_folder)
+
+    print("Conversion to lowercase and saving completed.")
