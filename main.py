@@ -25,4 +25,4 @@ if __name__ == "__main__":
     print("Conversion to lowercase and saving completed.")
 
 for i in cleaned_speeches:
-    occurance(i)
+    occurrence(i)
