@@ -31,9 +31,20 @@ def convert_to_lowercase_and_save(input_folder, output_folder):
         with open(input_file_path, 'r') as input_file:
             content = input_file.read().lower()
 
+        dico_accent = {
+            "é": "e", "è": "e", "ê": "e", "ë": "e", "à": "a", "â": "a", "ä": "a",
+            "î": "i", "ï": "i", "ù": "u", "ô": "o", "ö": "o"
+        }
 
-        with open(output_file_path, 'w',encoding="utf-8") as output_file:
-            output_file.write(content)
+        new_content = ""
+        for char in content:
+            if char in dico_accent:
+                new_content += dico_accent[char]
+            else:
+                new_content += char
+
+        with open(output_file_path, "w") as output_file:
+            output_file.write(new_content)
 
 
 
