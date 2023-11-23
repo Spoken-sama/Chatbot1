@@ -25,6 +25,7 @@ def convert_to_lowercase_and_save(input_folder, output_folder):
 
     for file_name in text_files:
         input_file_path = os.path.join(input_folder, file_name)
+        file_name="Cleaned_"+file_name
         output_file_path = os.path.join(cleaned_folder_path, file_name)
 
         with open(input_file_path, 'r') as input_file:
