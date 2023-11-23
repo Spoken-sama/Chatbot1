@@ -5,3 +5,5 @@ def extract_name_president(name):
     else:
         president_last_name = president_name[:-4]
     return president_last_name
+
+

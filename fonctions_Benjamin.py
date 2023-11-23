@@ -31,8 +31,20 @@ def convert_to_lowercase_and_save(input_folder, output_folder):
         with open(input_file_path, 'r') as input_file:
             content = input_file.read().lower()
 
-        with open(output_file_path, 'w') as output_file:
+        with open(output_file_path, 'w',encoding="utf-8") as output_file:
             output_file.write(content)
+
+
+
+def occurance(file_name):
+     dictionary={}
+     file_name=
+     with open(file_name, "r") as texte:
+         for line in texte:
+             for word in line.split():
+                 if word not in dictionary:
+                     dictionary[word]+=1
+     print(dictionary)
 
 
 

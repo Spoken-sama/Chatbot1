@@ -5,6 +5,8 @@ speeches = ["Nomination_Chirac1.txt", "Nomination_Chirac2.txt", "Nomination_Gisc
             "Nomination_Hollande.txt", "Nomination_Macron.txt", "Nomination_Mitterrand1.txt",
             "Nomination_Mitterrand2.txt", "Nomination_Sarkozy.txt"]
 
+cleaned_speeches=["Cleaned_Nomination_Chirac1.txt","Cleaned_Nomination_Chirac2.txt","Cleaned_Nomination_Giscard dEstaing.txt","Cleaned_Nomination_Hollande.txt","Cleaned_Nomination_Macron.txt","Cleaned_Nomination_Mitterrand1.txt","Cleaned_Nomination_Mitterrand2.txt","Cleaned_Nomination_Sarkozy.txt"]
+
 last_name = []
 
 for i in speeches:
@@ -21,3 +23,6 @@ if __name__ == "__main__":
     convert_to_lowercase_and_save(input_folder, output_folder)
 
     print("Conversion to lowercase and saving completed.")
+
+for i in cleaned_speeches:
+    occurance(i)
