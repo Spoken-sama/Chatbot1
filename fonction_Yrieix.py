@@ -1,3 +1,6 @@
+import os
+
+
 def extract_name_president(name):
     president_name = name[11:]
     if ("1" in president_name) or ("2" in president_name):
@@ -9,6 +12,7 @@ def extract_name_president(name):
 
 
 def remove_ponctuation(text):
+    os.chdir('Cleaned')
     with open(text,"w") as t :
         line = t.readline()
         while line != "":
@@ -16,5 +20,4 @@ def remove_ponctuation(text):
                 if (char>="!" and char<="/") or (char>=":" and char<="?") or (char>="[" and char<="`") or (char>="{" and char<="~") :
                     char = " "
             line = f.readline()
-    t.close()
-
+    os.chdir('..')
