@@ -21,8 +21,9 @@ if __name__ == "__main__":
     output_folder = "cleaned"
 
     convert_to_lowercase_and_save(input_folder, output_folder)
-'''for i in cleaned_speeches:
-    remove_ponctuation(i)'''
+
+for i in cleaned_speeches:
+    remove_ponctuation(i)
 
 print("Conversion to lowercase and saving completed.")
 

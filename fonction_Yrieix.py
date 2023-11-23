@@ -1,4 +1,5 @@
 import os
+import string
 
 
 def extract_name_president(name):
@@ -11,13 +12,16 @@ def extract_name_president(name):
 
 
 
-'''def remove_ponctuation(text):
+def remove_ponctuation(input_file):
     os.chdir('Cleaned')
-    with open(text,"w") as t :
-        line = t.readline()
-        while line != "":
-            for char in line:
-                if (char>="!" and char<="/") or (char>=":" and char<="?") or (char>="[" and char<="`") or (char>="{" and char<="~") :
-                    char = " "
-            line = f.readline()
-    os.chdir('..')'''
+
+    p = string.punctuation
+
+    with open(input_file,"r") as t :
+        text = t.read()
+        for char in p :
+            text = text.replace(char, " ")
+        with open(input_file,"w") as output :
+            output.write(text)
+
+    os.chdir('..')
