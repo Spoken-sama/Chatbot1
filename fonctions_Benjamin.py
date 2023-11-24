@@ -58,7 +58,9 @@ def occurrence(file_name):
                     dictionary[word] = 1
                 else:
                     dictionary[word] += 1
+    word_sum = sum(dictionary.values())
     print(dictionary)
+    print(word_sum)
     os.chdir('..')
 
 

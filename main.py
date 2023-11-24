@@ -29,3 +29,5 @@ print("Conversion to lowercase and saving completed.")
 
 for i in cleaned_speeches:
     occurrence(i)
+
+total =7241
