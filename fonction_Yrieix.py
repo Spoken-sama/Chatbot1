@@ -25,3 +25,25 @@ def remove_ponctuation(input_file):
             output.write(text)
 
     os.chdir('..')
+
+def TF_IDF_nonimportant_value(dico):
+    list_non_important_value = []
+    for i in dico.items() :
+        cpt = 0
+        for j in i[1] :
+            if j == 0.0 :
+                cpt += 1
+        if cpt == 8 :
+            list_non_important_value.append(i[0])
+    return list_non_important_value
+
+def TF_IDF_highest_value(dico):
+    word_highest = ""
+    highest_value = 0
+    for i in dico.items():
+        for j in i[1]:
+            if j > highest_value:
+                highest_value = j
+                word_highest = i[0]
+    return word_highest, highest_value
+
