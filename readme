@@ -1,7 +1,12 @@
 Benjamin Duramé Grémont
-Yrieix
+Yrieix De Salaberry
 
 Link to github :
 https://github.com/Spoken-sama/Chatbot1
 
-This app take speeches and give you full name of the autor, then simplifies the text and give interest value to each word 0
+This app take speeches and give you full name of the autor, then simplifies the text and give interest value to each word, 0 being the least important words.
+
+Instructions while running code:
+
+Each function has a print in comment to focus on one fonction or an other like the flolowing example: '''print(dico_occ)'''.
+To make the result of the fonction appear just take off the '''.

@@ -49,19 +49,6 @@ def convert_to_lowercase_and_save(input_folder, output_folder):
         with open(output_file_path, "w") as output_file:
             output_file.write(new_content)
 
-'''def TF(file_name):
-    dico_occ = {}
-    os.chdir('cleaned')
-    with open(file_name, "r") as texte:
-        for line in texte:
-            for word in line.split():
-                if word not in dico_occ:
-                    dico_occ[word] = 1
-                else:
-                    dico_occ[word] += 1
-    os.chdir('..')
-    print(dico_occ)
-    return dico_occ'''
 
 def TF(file_name):
     dico_occ = {}
